@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --orange: #f68b1e;
+  --gray: #f1f1f2;
+  --border-color: #a3a3a6;
+}
+
+body {
+  background: var(--gray);
+  font-family: 'Poppins', serif;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.02rem 3.5rem;
+  background: white;
+
+  ion-icon {
+    font-size: 2rem;
+  }
+
+  #jumiaLogo {
+    width: 180px;
+    height: 100px;
+    object-fit: contain;
+  }
+
+  .searchBar {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    border-radius: 0.2rem;
+    padding: 0.6rem 0.8rem;
+    gap: 0.5rem;
+
+    ion-icon {
+      font-weight: 900;
+      width: 25px;
+      height: 25px;
+    }
+
+    input {
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  button {
+    background: var(--orange);
+    border: none;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-left: auto;
+
+    li {
+      display: flex;
+      align-items: end;
+    }
+  }
+}
+
+main {
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+  padding: 2rem;
+
+  #mainProduct,
+  #otherProducts {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.8rem;
+  }
+
+  firstSection {
+    width: 70%;
+  }
+
+  #mainProduct {
+    display: flex;
+    gap: 1.8rem;
+    align-items: start;
+
+    .details {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+
+      #productName {
+        font-weight: 400;
+      }
+
+      #productPrice {
+        font-weight: 600;
+      }
+
+      button {
+        width: 100%;
+        background: var(--orange);
+        border: none;
+        color: white;
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+        font-weight: 700;
+        font-size: 1rem;
+      }
+    }
+
+    img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  #otherProducts {
+    width: 30%;
+
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    #productContainer {
+      height: 60vh;
+      overflow-y: scroll;
+
+      li {
+        margin: 1.2rem 0;
+        display: flex;
+        padding: 0.8rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 0.2rem;
+
+        .title {
+          display: flex;
+          align-items: start;
+          gap: 0.6rem;
+          overflow: hidden;
+
+          ion-icon {
+            color: var(--orange);
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      li:hover {
+        background: #f1f1f1;
+      }
+
+      h2 {
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1;
+        white-space: nowrap;
+      }
+
+      button {
+        width: 40%;
+        background: var(--orange);
+        border: none;
+        color: white;
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+        font-weight: 700;
+        font-size: 1rem;
+      }
+    }
+  }
+}
